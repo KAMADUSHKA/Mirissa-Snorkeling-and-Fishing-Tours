@@ -2,7 +2,7 @@
   "useSmtp": true,
   "host": "smtp.gmail.com",
   "port": 465,
-  "username": "Tharindu",
+  "username": "tharinduranaweera523@gmail.com",
   "password": "1234",
   "recipientEmail": "tharinduranaweera523@gmail.com"
 }
