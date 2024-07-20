@@ -65,17 +65,32 @@ try {
             $template);
     }
 
-    preg_match("/(<!-- #\{BeginInfo\} -->)(.|\s)*?(<!-- #\{EndInfo\} -->)/", $template, $tmp, PREG_OFFSET_CAPTURE);
+
+    // Load template
+    $template = file_get_contents('rd-mailform.tpl');
+    
+    // Debugging: Print the template to check its content
+    // echo '<pre>' . htmlspecialchars($template) . '</pre>';
+    
+    // Attempt to extract content between markers
+    if (preg_match("/<!-- #\{BeginInfo\} -->(.*?)<!-- #\{EndInfo\} -->/s", $template, $matches)) {
+        $infoSection = $matches[1];
+        // echo 'Extracted content:correct';
+    } else {
+        echo 'No match found';
+    }
+    
+    // Process and replace content in template
     foreach ($_POST as $key => $value) {
         if ($key != "counter" && $key != "email" && $key != "message" && $key != "form-type" && $key != "g-recaptcha-response" && !empty($value)){
             $info = str_replace(
                 array("<!-- #{BeginInfo} -->", "<!-- #{InfoState} -->", "<!-- #{InfoDescription} -->"),
                 array("", ucfirst($key) . ':', $value),
-                $tmp[0][0]);
-
+                $infoSection);
+    
             $template = str_replace("<!-- #{EndInfo} -->", $info, $template);
         }
-    }
+    } 
 
     $template = str_replace(
         array("<!-- #{Subject} -->", "<!-- #{SiteName} -->"),
