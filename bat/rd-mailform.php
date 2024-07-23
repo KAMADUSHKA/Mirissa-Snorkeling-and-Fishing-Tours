@@ -93,7 +93,7 @@ try {
         array("<!-- #{Subject} -->", "<!-- #{SiteName} -->"),
         array($subject, $_SERVER['SERVER_NAME']),
         $template);
-
+// var_dump($template);exit;
     $mail = new PHPMailer();
 
 
@@ -126,7 +126,7 @@ try {
         $mail->Password = $formConfig['password'];
     }
 
-    $mail->From = $addresses[0][0][0];
+    $mail->From = $_POST['email'];
 
     # Attach file
     if (isset($_FILES['file']) &&
