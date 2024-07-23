@@ -66,8 +66,6 @@ try {
     }
 
 
-    // Load template
-    $template = file_get_contents('rd-mailform.tpl');
     
     // Debugging: Print the template to check its content
     // echo '<pre>' . htmlspecialchars($template) . '</pre>';
@@ -75,7 +73,6 @@ try {
     // Attempt to extract content between markers
     if (preg_match("/<!-- #\{BeginInfo\} -->(.*?)<!-- #\{EndInfo\} -->/s", $template, $matches)) {
         $infoSection = $matches[1];
-        // echo 'Extracted content:correct';
     } else {
         echo 'No match found';
     }
@@ -151,7 +148,12 @@ try {
     $mail->CharSet = 'utf-8';
     $mail->Subject = $subject;
     $mail->MsgHTML($template);
-    $mail->send();
+
+    if (!$mail->send()) {
+        echo 'Mailer Error: ' . $mail->ErrorInfo;
+    } else {
+        echo 'Message sent!';
+    }
 
     die('MF000');
 } catch (phpmailerException $e) {
