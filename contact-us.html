@@ -12,7 +12,17 @@
     <link rel="stylesheet" href="css/bootstrap.css">
     <link rel="stylesheet" href="css/fonts.css">
     <link rel="stylesheet" href="css/style.css">
-    <style>.ie-panel{display: none;background: #212121;padding: 10px 0;box-shadow: 3px 3px 5px 0 rgba(0,0,0,.3);clear: both;text-align:center;position: relative;z-index: 1;} html.ie-10 .ie-panel, html.lt-ie-10 .ie-panel {display: block;}</style>
+    <style>
+      .ie-panel{display: none;background: #212121;padding: 10px 0;box-shadow: 3px 3px 5px 0 rgba(0,0,0,.3);clear: both;text-align:center;position: relative;z-index: 1;} html.ie-10 .ie-panel, html.lt-ie-10 .ie-panel {display: block;}
+      #map {
+            width: 100%;
+            height: 400px;
+        }
+      </style>
+    <!-- WOW.js -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/wow/1.1.2/wow.min.js"></script>
+    <link rel="stylesheet" href="https://unpkg.com/leaflet@1.7.1/dist/leaflet.css"/>
+    <script src="https://unpkg.com/leaflet@1.7.1/dist/leaflet.js"></script>
   </head>
   <body>
     <div class="ie-panel"><a href="http://windows.microsoft.com/en-US/internet-explorer/"><img src="images/ie8-panel/warning_bar_0000_us.jpg" height="42" width="820" alt="You are using an outdated browser. For a faster, safer browsing experience, upgrade for free today."></a></div>
@@ -94,19 +104,21 @@
       </header>
       <!-- RD Google Map-->
       <section class="section section-fluid">
-        <div class="google-map-container" data-zoom="5" data-icon="images/gmap_marker.png" data-icon-active="images/gmap_marker.png" data-center="9870 St Vincent Place, Glasgow, DC 45 Fr 45." data-styles="[{&quot;featureType&quot;:&quot;landscape&quot;,&quot;stylers&quot;:[{&quot;hue&quot;:&quot;#FFBB00&quot;},{&quot;saturation&quot;:43.400000000000006},{&quot;lightness&quot;:37.599999999999994},{&quot;gamma&quot;:1}]},{&quot;featureType&quot;:&quot;road.highway&quot;,&quot;stylers&quot;:[{&quot;hue&quot;:&quot;#FFC200&quot;},{&quot;saturation&quot;:-61.8},{&quot;lightness&quot;:45.599999999999994},{&quot;gamma&quot;:1}]},{&quot;featureType&quot;:&quot;road.arterial&quot;,&quot;stylers&quot;:[{&quot;hue&quot;:&quot;#FF0300&quot;},{&quot;saturation&quot;:-100},{&quot;lightness&quot;:51.19999999999999},{&quot;gamma&quot;:1}]},{&quot;featureType&quot;:&quot;road.local&quot;,&quot;stylers&quot;:[{&quot;hue&quot;:&quot;#FF0300&quot;},{&quot;saturation&quot;:-100},{&quot;lightness&quot;:52},{&quot;gamma&quot;:1}]},{&quot;featureType&quot;:&quot;water&quot;,&quot;stylers&quot;:[{&quot;hue&quot;:&quot;#0078FF&quot;},{&quot;saturation&quot;:-13.200000000000003},{&quot;lightness&quot;:2.4000000000000057},{&quot;gamma&quot;:1}]},{&quot;featureType&quot;:&quot;poi&quot;,&quot;stylers&quot;:[{&quot;hue&quot;:&quot;#00FF6A&quot;},{&quot;saturation&quot;:-1.0989010989011234},{&quot;lightness&quot;:11.200000000000017},{&quot;gamma&quot;:1}]}]">
-          <div class="google-map"></div>
-          <ul class="google-map-markers">
-            <li data-location="9870 St Vincent Place, Glasgow, DC 45 Fr 45." data-description="9870 St Vincent Place, Glasgow"></li>
-          </ul>
-        </div>
-      </section>
+        <div id="map" style="width: 100%; height: 400px;"></div>
+        <!-- <div class="google-map-container" data-zoom="15" data-center="NO/09, Thappawatta Rd, Thalaramba, Kamburugamuwa">
+            <div id="map" class="google-map"></div>
+            <ul class="google-map-markers">
+                <li data-location="NO/09, Thappawatta Rd, Thalaramba, Kamburugamuwa" data-description="NO/09, Thappawatta Rd, Thalaramba, Kamburugamuwa"></li>
+            </ul>
+        </div> -->
+    </section>
+    
 
       <!-- Contact information-->
       <section class="section section-sm section-first bg-default">
         <div class="container">
           <div class="row row-30 justify-content-center">
-            <div class="col-sm-8 col-md-6 col-lg-4">
+            <div class="col-sm-8 col-md-6 col-lg-4 animate-item_fadeOutScale">
               <article class="box-contacts">
                 <div class="box-contacts-body">
                   <div class="box-contacts-icon fl-bigmug-line-cellphone55"></div>
@@ -116,7 +128,7 @@
                 </div>
               </article>
             </div>
-            <div class="col-sm-8 col-md-6 col-lg-4">
+            <div class="col-sm-8 col-md-6 col-lg-4 animate-item_fadeOutScale">
               <article class="box-contacts">
                 <div class="box-contacts-body">
                   <div class="box-contacts-icon fl-bigmug-line-up104"></div>
@@ -125,7 +137,7 @@
                 </div>
               </article>
             </div>
-            <div class="col-sm-8 col-md-6 col-lg-4">
+            <div class="col-sm-8 col-md-6 col-lg-4 animate-item_fadeOutScale">
               <article class="box-contacts">
                 <div class="box-contacts-body">
                   <div class="box-contacts-icon fl-bigmug-line-chat55"></div>
@@ -144,7 +156,7 @@
         <div class="container">
           <article class="title-classic">
             <div class="title-classic-title">
-              <h3>Get in touch</h3>
+              <h3 class="animate-item_fadeIn">Get in touch</h3>
             </div>
             <div class="title-classic-text">
               <p>If you have any questions, just fill in the contact form, and we will answer you shortly.</p>
@@ -190,7 +202,7 @@
             <div class="row row-40 justify-content-lg-between">
               <div class="col-sm-6 col-md-12 col-lg-3 col-xl-4">
                 <div class="oh-desktop">
-                  <div class="wow slideInRight" data-wow-delay="0s">
+                  <div class="animate-item_slideInRight">
                     <h6 class="text-spacing-100 text-uppercase">Contact us</h6>
                     <ul class="footer-contacts d-inline-block d-sm-block">
                       <li>
@@ -217,20 +229,20 @@
               </div>
               <div class="col-sm-6 col-md-5 col-lg-3 col-xl-4">
                 <div class="oh-desktop">
-                  <div class="wow slideInDown" data-wow-delay="0s">
+                  <div class="animate-item_fadeInScale">
                     <h6 class="text-spacing-100 text-uppercase">Popular news</h6>
                     <!-- Post Minimal 2-->
                     <article class="post post-minimal-2">
                       <p class="post-minimal-2-title">Enjoy snorkeling with majestic whales. Don't miss out, Hurry and book your adventure now!</p>
                       <div class="post-minimal-2-time">
-                        <time datetime="2019-05-04">July 20, 20204</time>
+                        <time datetime="2019-05-04">July 20, 2024</time>
                       </div>
                     </article>
                     <!-- Post Minimal 2-->
                     <article class="post post-minimal-2">
                       <p class="post-minimal-2-title">Experience the thrill of our deep sea boat tours. Don't miss out.</p>
                       <div class="post-minimal-2-time">
-                        <time datetime="2019-05-04">July 20, 20204</time>
+                        <time datetime="2019-05-04">July 20, 2024</time>
                       </div>
                     </article>
                   </div>
@@ -238,7 +250,7 @@
               </div>
               <div class="col-sm-11 col-md-7 col-lg-5 col-xl-4">
                 <div class="oh-desktop">
-                  <div class="wow slideInLeft" data-wow-delay="0s">
+                  <div class="animate-item_slideInLeft" data-wow-delay="0s">
                     <h6 class="text-spacing-100 text-uppercase">Quick links</h6>
                     <ul class="row-6 list-0 list-marked list-marked-md list-marked-secondary list-custom-2">
                       <li><a href="about.html">About us</a></li>
@@ -285,5 +297,24 @@
     <!-- Javascript-->
     <script src="js/core.min.js"></script>
     <script src="js/script.js"></script>
+    <script src="js/animation.js"></script>
   </body>
 </html>
+
+<script>
+  $(document).ready(function() {
+      new WOW().init();
+  });
+
+  document.addEventListener("DOMContentLoaded", function() {
+      var map = L.map('map').setView([5.938308591841763, 80.47659594621052], 15); // Coordinates for NO/09, Thappawatta Rd, Thalaramba, Kamburugamuwa
+
+      L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
+          attribution: '&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors'
+      }).addTo(map);
+
+      L.marker([5.938308591841763, 80.47659594621052]).addTo(map)
+          .bindPopup('Mirissa Snorkeling And Fishing Center')
+          .openPopup();
+  }); 
+</script>

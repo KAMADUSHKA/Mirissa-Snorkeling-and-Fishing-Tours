@@ -13,6 +13,8 @@
     <link rel="stylesheet" href="css/fonts.css">
     <link rel="stylesheet" href="css/style.css">
     <style>.ie-panel{display: none;background: #212121;padding: 10px 0;box-shadow: 3px 3px 5px 0 rgba(0,0,0,.3);clear: both;text-align:center;position: relative;z-index: 1;} html.ie-10 .ie-panel, html.lt-ie-10 .ie-panel {display: block;}</style>
+    <!-- WOW.js -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/wow/1.1.2/wow.min.js"></script>
   </head>
   <body>
     <div class="ie-panel"><a href="http://windows.microsoft.com/en-US/internet-explorer/"><img src="images/ie8-panel/warning_bar_0000_us.jpg" height="42" width="820" alt="You are using an outdated browser. For a faster, safer browsing experience, upgrade for free today."></a></div>
@@ -95,7 +97,7 @@
       <!-- Breadcrumbs -->
       <section class="breadcrumbs-custom-inset">
         <div class="breadcrumbs-custom context-dark bg-overlay-60">
-          <div class="container">
+          <div class="container animate-item_fadeInUp">
             <h2 class="breadcrumbs-custom-title">About</h2>
             <ul class="breadcrumbs-custom-path">
               <li><a href="index.html">Home</a></li>
@@ -109,9 +111,9 @@
       <section class="section section-sm section-first bg-default text-md-left">
         <div class="container">
           <div class="row row-50 justify-content-center align-items-xl-center">
-            <div class="col-md-10 col-lg-5 col-xl-6"><img src="images/about-1-519x564.jpg" alt="" width="519" height="564"/>
+            <div class="col-md-10 col-lg-5 col-xl-6 animate-item_fadeOutScale"><img src="images/about-1-519x564.jpg" alt="" width="519" height="564"/>
             </div>
-            <div class="col-md-10 col-lg-7 col-xl-6">
+            <div class="col-md-10 col-lg-7 col-xl-6 animate-item_fadeInRight">
               <h1 class="text-spacing-25 font-weight-normal title-opacity-9">Why choose us</h1>
               <!-- Bootstrap tabs-->
               <div class="tabs-custom tabs-horizontal tabs-line" id="tabs-4">
@@ -200,7 +202,7 @@
       <!-- Latest Projects-->
       <section class="section section-sm section-fluid bg-default">
         <div class="container">
-          <h3>Thing To Do in Mirissa</h3>
+          <h3 class="animate-item_fadeIn">Thing To Do in Mirissa</h3>
         </div>
         <!-- Owl Carousel-->
         <div class="owl-carousel owl-classic owl-timeline" data-items="1" data-md-items="2" data-lg-items="3" data-xl-items="4" data-margin="30" data-autoplay="false" data-nav="true" data-dots="true">
@@ -293,7 +295,7 @@
       <!-- What people Say-->
       <section class="section section-sm section-last bg-default">
         <div class="container">
-          <h3>What People Say</h3>
+          <h3 class="animate-item_fadeIn">What People Say</h3>
           <!-- Owl Carousel-->
           <div class="owl-carousel owl-modern" data-items="1" data-stage-padding="15" data-margin="30" data-dots="true" data-animation-in="fadeIn" data-animation-out="fadeOut" data-autoplay="true">
             <!-- Quote Lisa-->
@@ -378,7 +380,7 @@
             <div class="row row-40 justify-content-lg-between">
               <div class="col-sm-6 col-md-12 col-lg-3 col-xl-4">
                 <div class="oh-desktop">
-                  <div class="wow slideInRight" data-wow-delay="0s">
+                  <div class="animate-item_slideInRight">
                     <h6 class="text-spacing-100 text-uppercase">Contact us</h6>
                     <ul class="footer-contacts d-inline-block d-sm-block">
                       <li>
@@ -405,20 +407,20 @@
               </div>
               <div class="col-sm-6 col-md-5 col-lg-3 col-xl-4">
                 <div class="oh-desktop">
-                  <div class="wow slideInDown" data-wow-delay="0s">
+                  <div class="animate-item_fadeInScale">
                     <h6 class="text-spacing-100 text-uppercase">Popular news</h6>
                     <!-- Post Minimal 2-->
                     <article class="post post-minimal-2">
                       <p class="post-minimal-2-title">Enjoy snorkeling with majestic whales. Don't miss out, Hurry and book your adventure now!</p>
                       <div class="post-minimal-2-time">
-                        <time datetime="2019-05-04">July 20, 20204</time>
+                        <time datetime="2019-05-04">July 20, 2024</time>
                       </div>
                     </article>
                     <!-- Post Minimal 2-->
                     <article class="post post-minimal-2">
                       <p class="post-minimal-2-title">Experience the thrill of our deep sea boat tours. Don't miss out.</p>
                       <div class="post-minimal-2-time">
-                        <time datetime="2019-05-04">July 20, 20204</time>
+                        <time datetime="2019-05-04">July 20, 2024</time>
                       </div>
                     </article>
                   </div>
@@ -426,7 +428,7 @@
               </div>
               <div class="col-sm-11 col-md-7 col-lg-5 col-xl-4">
                 <div class="oh-desktop">
-                  <div class="wow slideInLeft" data-wow-delay="0s">
+                  <div class="animate-item_slideInLeft">
                     <h6 class="text-spacing-100 text-uppercase">Quick links</h6>
                     <ul class="row-6 list-0 list-marked list-marked-md list-marked-secondary list-custom-2">
                       <li><a href="about.html">About us</a></li>
@@ -473,5 +475,12 @@
     <!-- Javascript-->
     <script src="js/core.min.js"></script>
     <script src="js/script.js"></script>
+    <script src="js/animation.js"></script>
   </body>
 </html>
+
+<script>
+  $(document).ready(function() {
+      new WOW().init();
+  });
+</script>
