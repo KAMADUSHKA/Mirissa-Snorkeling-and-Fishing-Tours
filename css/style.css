@@ -13098,6 +13098,17 @@ html:not(.lt-ie10) .not-animated {
 	animation-name: fadeIn;
 }
 
+.animate__fadeIn {
+    -webkit-animation-name: fadeIn;
+    animation-name: fadeIn;
+    -webkit-animation-duration: 1.5s; /* Adjust duration as needed */
+    animation-duration: 1.5s; /* Adjust duration as needed */
+    -webkit-animation-timing-function: ease-in-out; /* Smooth easing */
+    animation-timing-function: ease-in-out; /* Smooth easing */
+    -webkit-animation-fill-mode: both;
+    animation-fill-mode: both;
+}
+
 @-webkit-keyframes fadeInUp {
 	0% {
 		opacity: 0;
@@ -13287,6 +13298,17 @@ html:not(.lt-ie10) .not-animated {
 .fadeOut {
 	-webkit-animation-name: fadeOut;
 	animation-name: fadeOut;
+}
+
+.animate__fadeOut {
+    -webkit-animation-name: fadeOut;
+    animation-name: fadeOut;
+    -webkit-animation-duration: 1.3s; /* Adjust duration as needed */
+    animation-duration: 1.3s; /* Adjust duration as needed */
+    -webkit-animation-timing-function: ease-in-out; /* Smooth easing */
+    animation-timing-function: ease-in-out; /* Smooth easing */
+    -webkit-animation-fill-mode: both;
+    animation-fill-mode: both;
 }
 
 @-webkit-keyframes slideInUp {
