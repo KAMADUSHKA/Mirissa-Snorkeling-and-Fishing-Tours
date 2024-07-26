@@ -1111,7 +1111,7 @@ a[href*='tel'], a[href*='mailto'] {
 	align-items: center;
 	justify-content: center;
 	min-height: 310px;
-	box-shadow: 0 0 10px 0 rgba(0, 0, 0, 0.17);
+	box-shadow: 0 0 10px 0 rgba(255, 255, 255, 0.695);
 	transition: all .3s ease;
 }
 
@@ -1150,7 +1150,7 @@ a[href*='tel'], a[href*='mailto'] {
 @media (min-width: 992px) {
 	.desktop .box-contacts {
 		box-shadow: none;
-		border: 1px solid #e1e1e1;
+		border: 3px solid #e1e1e1;
 	}
 	.desktop .box-contacts-decor {
 		margin-top: 17px;
@@ -1159,7 +1159,7 @@ a[href*='tel'], a[href*='mailto'] {
 	}
 	.desktop .box-contacts:hover {
 		border-color: transparent;
-		box-shadow: 0 0 10px 0 rgba(0, 0, 0, 0.17);
+		box-shadow: 0 0 10px 0 rgba(255, 255, 255, 0.695);
 	}
 	.desktop .box-contacts:hover .box-contacts-decor {
 		margin-top: 30px;
@@ -3758,11 +3758,20 @@ hr {
 	background: transparent;
 }
 
-.button-white-outline, .button-white-outline:focus {
+/* .button-white-outline, .button-white-outline:focus {
 	color: #ffffff;
 	background-color: transparent;
 	border-color: #ffffff;
-}
+} */
+
+/* @media (max-width: 768px) { */
+	.button-white-outline, .button-white-outline:focus {
+		color:  #01b3a7;
+		background-color: transparent;
+		border-color:  #01b3a7;
+	}
+/* } */
+
 
 .button-white-outline:hover, .button-white-outline:active {
 	color: #ffffff;
@@ -24859,4 +24868,14 @@ img.mfp-img {
     animation-timing-function: ease-in-out; /* Smooth easing */
     -webkit-animation-fill-mode: both;
     animation-fill-mode: both;
+}
+
+.box-home {
+	text-align: center;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	min-height: 310px;
+	box-shadow: 0 0 10px 0 rgba(146, 145, 145, 0.5);
+	transition: all .3s ease;
 }
