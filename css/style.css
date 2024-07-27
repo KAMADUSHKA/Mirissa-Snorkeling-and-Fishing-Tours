@@ -24879,3 +24879,10 @@ img.mfp-img {
 	box-shadow: 0 0 10px 0 rgba(146, 145, 145, 0.5);
 	transition: all .3s ease;
 }
+
+@media (max-width: 768px) {
+	.fotter_logo img {
+		width: 225px;
+		height: 36px;
+	}
+}
