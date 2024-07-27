@@ -13042,3 +13042,7 @@
 .material-icons-zoom_out:before {
 	content: "\e900";
 }
+
+.fa-tripadvisor:before {
+    content: "\f262";
+}
