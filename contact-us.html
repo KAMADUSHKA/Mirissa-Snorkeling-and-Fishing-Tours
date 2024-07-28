@@ -51,8 +51,10 @@
                   <!-- RD Navbar Brand-->
                   <div class="rd-navbar-brand">
                     <!--Brand-->
-                    <span class="font-weight-bold">Mirissa Snorkeling And Fishing Center</span>
-                    <!-- <a class="brand" href="index.html"><img src="images/logo-default-450x37.png" alt="" width="225" height="18"/></a> -->
+                    <!-- <span class="font-weight-bold">Mirissa Snorkeling And Fishing Center</span> -->
+                    <a class="brand" href="index.html">
+                      <img src="images/HeaderLogoNew.png" alt="logo" width="225" height="18" />
+                    </a>
                   </div>
                 </div>
                 <div class="rd-navbar-aside-right rd-navbar-collapse">
@@ -316,15 +318,41 @@
       new WOW().init();
   });
 
+  // document.addEventListener("DOMContentLoaded", function() {
+  //     var map = L.map('map').setView([5.938308591841763, 80.47659594621052], 15); 
+
+  //     L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
+  //         attribution: '&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors'
+  //     }).addTo(map);
+
+  //     L.marker([5.938308591841763, 80.47659594621052]).addTo(map)
+  //         .bindPopup('Mirissa Snorkeling And Fishing Center')
+  //         .openPopup();
+  // }); 
+
   document.addEventListener("DOMContentLoaded", function() {
-      var map = L.map('map').setView([5.938308591841763, 80.47659594621052], 15); // Coordinates for NO/09, Thappawatta Rd, Thalaramba, Kamburugamuwa
+            var map = L.map('map').setView([5.938308591841763, 80.47659594621052], 15); // Coordinates for NO/09, Thappawatta Rd, Thalaramba, Kamburugamuwa
 
-      L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
-          attribution: '&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors'
-      }).addTo(map);
+            L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
+                attribution: '&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors'
+            }).addTo(map);
 
-      L.marker([5.938308591841763, 80.47659594621052]).addTo(map)
-          .bindPopup('Mirissa Snorkeling And Fishing Center')
-          .openPopup();
-  }); 
+            var marker = L.marker([5.938308591841763, 80.47659594621052]).addTo(map)
+                .bindPopup('Mirissa Snorkeling And Fishing Center')
+                .openPopup();
+
+            var googleMapsLink = "https://www.google.com/maps/place/Mirissa+Whale+Snorkeling+and+Watching+Tours/@5.9387941,80.4769875,19z/data=!4m15!1m8!3m7!1s0x3ae13e3561865355:0xc03016583dc88746!2sThalaramba!3b1!8m2!3d5.941809!4d80.475757!16s%2Fg%2F1hc7wtghr!3m5!1s0x3ae13f6be3988641:0xe68ba1dece0f6bcd!8m2!3d5.9382653!4d80.476595!16s%2Fg%2F11s8h0z6gm?entry=ttu";
+
+            // Redirect to Google Maps when the popup is clicked
+            marker.on('popupopen', function() {
+                document.querySelector('.leaflet-popup-content').addEventListener('click', function() {
+                    window.location.href = googleMapsLink;
+                });
+            });
+
+            // Redirect to Google Maps when the map is clicked
+            map.on('click', function() {
+                window.location.href = googleMapsLink;
+            });
+        });
 </script>
