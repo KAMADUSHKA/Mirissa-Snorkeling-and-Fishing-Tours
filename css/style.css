@@ -14761,13 +14761,16 @@ html.tablet .ui-to-top {
 	text-align: left;
 	font-size: 22px;
 	line-height: 46px;
+	/* background-color: yellow; */
 }
 
 .rd-navbar-fixed .rd-navbar-brand img {
 	max-width: 120px;
-	max-height: 58px;
+	max-height: 68px;
 	width: auto;
 	height: auto;
+	/* background-color: red; */
+	/* padding-top: 2px; */
 }
 
 @media (min-width: 576px) {
