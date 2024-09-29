@@ -114,7 +114,7 @@
 			pageTransition({
 				target:            document.querySelector('.page'),
 				delay:             0,
-				duration:          500,
+				duration:          100,
 				classIn:           'fadeIn',
 				classOut:          'fadeOut',
 				classActive:       'animated',
@@ -142,8 +142,8 @@
 		if (plugins.preloader.length && !isNoviBuilder) {
 			pageTransition({
 				target:            document.querySelector('.page'),
-				delay:             100,
-				duration:          500,
+				delay:             50,
+				duration:          100,
 				classIn:           'fadeIn',
 				classOut:          'fadeOut',
 				classActive:       'animated',
@@ -810,7 +810,7 @@
 		if (plugins.preloader.length) {
 			loaderTimeoutId = setTimeout(function () {
 				if (!windowReady && !isNoviBuilder) plugins.preloader.removeClass('loaded');
-			}, 2000);
+			}, 100);
 		}
 
 		// Google maps
