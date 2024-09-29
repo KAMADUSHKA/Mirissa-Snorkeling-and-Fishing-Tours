@@ -32,17 +32,20 @@
     <style>.ie-panel{display: none;background: #212121;padding: 10px 0;box-shadow: 3px 3px 5px 0 rgba(0,0,0,.3);clear: both;text-align:center;position: relative;z-index: 1;} html.ie-10 .ie-panel, html.lt-ie-10 .ie-panel {display: block;}</style>
     <!-- WOW.js -->
     <script src="https://cdnjs.cloudflare.com/ajax/libs/wow/1.1.2/wow.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/lazysizes/5.3.2/lazysizes.min.js" async></script>
   </head>
   <body>
     <div class="ie-panel"><a href="http://windows.microsoft.com/en-US/internet-explorer/"><img src="images/ie8-panel/warning_bar_0000_us.jpg" height="42" width="820" alt="You are using an outdated browser. For a faster, safer browsing experience, upgrade for free today."></a></div>
-    <div class="preloader">
+    
+    <!-- <div class="preloader">
       <div class="preloader-body">
         <div class="cssload-container">
           <div class="cssload-speeding-wheel"></div>
         </div>
         <p>Loading...</p>
       </div>
-    </div>
+    </div> -->
+
     <div class="page">
       <!-- Page Header-->
       <header class="section page-header">
@@ -107,6 +110,7 @@
           </nav>
         </div>
       </header>
+
       <!-- Breadcrumbs -->
       <section class="breadcrumbs-custom-inset">
         <div class="breadcrumbs-custom context-dark bg-overlay-60">
@@ -122,7 +126,7 @@
       </section>
 
       <!-- Why choose us-->
-      <section class="section section-sm section-first bg-default text-md-left bg-gray-dark">
+      <section class="section section-sm section-first bg-default text-md-left bg-gray-dark lazyload">
         <div class="container">
           <div class="row row-50 justify-content-center align-items-xl-center">
             <div class="col-md-10 col-lg-5 col-xl-6 animate-item_fadeOutScale"><img src="images/about-1-519x564.png" alt="" width="519" height="564"/>
@@ -173,7 +177,7 @@
       <hr class="hr-opacity">
       
       <!-- Latest Projects-->
-      <section class="section section-sm section-fluid bg-gray-dark">
+      <section class="section section-sm section-fluid bg-gray-dark lazyload">
         <div class="container">
           <h3 class="animate-item_fadeIn">Thing To Do in Mirissa</h3>
         </div>
@@ -251,8 +255,9 @@
           </div>
         </div>
       </section>
+
       <!-- What people Say-->
-      <section class="section section-sm section-last bg-default">
+      <section class="section section-sm section-last bg-default lazyload">
         <div class="container">
           <h3 class="animate-item_fadeIn">What People Say</h3>
           <!-- Owl Carousel-->
@@ -328,9 +333,9 @@
           </div>
         </div>
       </section>
-      <!--Counters-->
+
       <!-- Counter Classic-->
-      <section class="section section-fluid bg-default">
+      <section class="section section-fluid bg-default lazyload">
         <div class="parallax-container" data-parallax-img="images/bg-counter-2.jpg">
           <div class="parallax-content section-xl context-dark bg-overlay-26">
             <div class="container">
@@ -363,7 +368,7 @@
       </section>
 
       <!-- Page Footer-->
-      <footer class="section footer-corporate context-dark">
+      <footer class="section footer-corporate context-dark lazyload">
         <div class="footer-corporate-inset">
           <div class="container">
             <div class="row row-40 justify-content-lg-between">
@@ -467,8 +472,10 @@
         </div>
       </footer>
     </div>
+
     <!-- Global Mailform Output-->
     <div class="snackbars" id="form-output-global"></div>
+
     <!-- Javascript-->
     <script src="js/core.min.js"></script>
     <script src="js/script.js"></script>

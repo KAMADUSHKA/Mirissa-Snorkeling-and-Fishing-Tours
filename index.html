@@ -32,6 +32,8 @@
   <link rel="stylesheet" href="css/style.css">
   <!-- Animate.css -->
   <!-- <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"/> -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/lazysizes/5.3.2/lazysizes.min.js" async></script>
+
   <style>
     .ie-panel {
       display: none;
@@ -58,14 +60,16 @@
         src="images/ie8-panel/warning_bar_0000_us.jpg" height="42" width="820"
         alt="You are using an outdated browser. For a faster, safer browsing experience, upgrade for free today."></a>
   </div>
-  <div class="preloader">
+
+  <!-- <div class="preloader">
     <div class="preloader-body">
       <div class="cssload-container">
         <div class="cssload-speeding-wheel"></div>
       </div>
       <p>Loading...</p>
     </div>
-  </div>
+  </div> -->
+
   <div class="page">
     <!-- Page Header-->
     <header class="section page-header">
@@ -193,8 +197,9 @@
       <!-- Swiper Pagination-->
       <div class="swiper-pagination"></div>
     </section>
+
     <!-- Section Box Categories-->
-    <section class="section section-lg section-top-1 bg-gray-dark">
+    <section class="section section-lg section-top-1 bg-gray-dark lazyload">
       <div class="container offset-negative-1">
         <div class="box-categories cta-box-wrap">
             <div class="box-categories-content">
@@ -229,7 +234,7 @@
     <hr class="hr-opacity">
 
     <!-- Discover New Horizons-->
-    <section class="section section-sm section-first text-md-left bg-gray-dark">
+    <section class="section section-sm section-first text-md-left bg-gray-dark lazyload">
       <div class="container">
         <div class="row row-50 align-items-center justify-content-center justify-content-xl-between">
           <div class="col-lg-6 text-center animate-item_fadeOutScale"><img src="images/SF-556-382.png" alt="" width="556"
@@ -283,7 +288,7 @@
     </section>
 
     <!--	Our Services-->
-    <section class="section section-sm">
+    <section class="section section-sm lazyload">
       <div class="container">
         <h3 class="animate-item_fadeIn">Our Services</h3>
         <div class="row row-30">
@@ -385,7 +390,7 @@
     </section>
     
     <!-- Hot tours-->
-    <section class="section section-sm bg-default bg-gray-dark">
+    <section class="section section-sm bg-default bg-gray-dark lazyload">
       <div class="container">
         <h3 class="oh-desktop"><span class="d-inline-block animate-item_fadeIn">Hot Tours</span></h3>
         <div class="row row-sm row-40 row-md-50">
@@ -577,7 +582,7 @@
     </section>
 
     <!-- Section Subscribe-->
-    <section class="section bg-default text-center offset-top-50">
+    <section class="section bg-default text-center offset-top-50 lazyload">
       <div class="parallax-container" data-parallax-img="images/parallax-1-1920x850.jpg">
         <div class="parallax-content section-xl section-inset-custom-1 context-dark bg-overlay-2-21">
           <div class="container">
@@ -596,7 +601,7 @@
     </section>
     
     <!--	Instagrram wondertour-->
-    <section class="section section-sm section-top-0 section-fluid section-relative bg-gray-4">
+    <section class="section section-sm section-top-0 section-fluid section-relative bg-gray-4 lazyload">
       <div class="container-fluid">
         <h6 class="gallery-title">Gallery</h6>
         <!-- Owl Carousel-->
@@ -676,8 +681,9 @@
         </div>
       </div>
     </section>
+
     <!-- Page Footer-->
-    <footer class="section footer-corporate context-dark">
+    <footer class="section footer-corporate context-dark lazyload">
       <div class="footer-corporate-inset">
         <div class="container">
           <div class="row row-40 justify-content-lg-between">
@@ -784,8 +790,10 @@
       </div>
     </footer>
   </div>
+  
   <!-- Global Mailform Output-->
   <div class="snackbars" id="form-output-global"></div>
+
   <!-- Javascript-->
   <script src="js/core.min.js"></script>
   <script src="js/script.js"></script>
