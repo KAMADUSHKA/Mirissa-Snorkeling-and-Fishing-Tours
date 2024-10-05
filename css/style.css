@@ -24919,15 +24919,3 @@ img.mfp-img {
     text-decoration: none; /* Remove underline */
 }
 
-/* WhatsApp Logo Styling */
-.whatsapp-logo {
-    width: 50px; /* Size of the WhatsApp logo */
-    height: 50px;
-    border-radius: 50%;
-    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.2); /* Optional shadow effect */
-}
-
-/* Optional Hover Effect */
-.whatsapp-button:hover .whatsapp-logo {
-    box-shadow: 0px 6px 12px rgba(0, 0, 0, 0.3); /* Enhance shadow on hover */
-}
